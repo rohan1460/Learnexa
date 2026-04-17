@@ -10,7 +10,6 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
 [![OpenRouter](https://img.shields.io/badge/OpenRouter-AI-8A2BE2?style=for-the-badge)](https://openrouter.ai/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 [✨ Features](#-features) • [🛠️ Tech Stack](#️-tech-stack)
 
@@ -103,12 +102,6 @@ Ask questions. Generate quizzes. Summarize notes. Convert formats. Listen to you
 
 **Authentication**
 - 🔐 [NextAuth.js](https://next-auth.js.org/) — Complete auth solution
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
