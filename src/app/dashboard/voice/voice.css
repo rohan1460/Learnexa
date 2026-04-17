@@ -1,0 +1,237 @@
+.voice-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #fff, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-header p {
+  color: #a1a1aa;
+  font-size: 1.1rem;
+}
+
+.voice-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.conversation-area {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.message {
+  max-width: 80%;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  animation: fade-in 0.3s ease-out;
+  line-height: 1.5;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-bottom-right-radius: 4px;
+}
+
+.message.ai {
+  align-self: flex-start;
+  background: rgba(39, 39, 42, 0.8);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 4px;
+}
+
+.message-label {
+  font-size: 0.8rem;
+  color: #a1a1aa;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.controls-area {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(24, 24, 27, 0.6);
+  border-top: 1px solid var(--border);
+}
+
+.mic-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+  position: relative;
+}
+
+.mic-button::before,
+.mic-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: var(--primary);
+  z-index: -1;
+  opacity: 0;
+}
+
+.mic-button:hover {
+  transform: scale(1.05);
+  background: var(--primary-hover);
+}
+
+.mic-button.listening {
+  background: #ef4444;
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.5);
+  animation: pulse-border 1.5s infinite;
+}
+
+.mic-button.listening::before {
+  animation: ripple 1.5s infinite;
+}
+
+.mic-button.listening::after {
+  animation: ripple 1.5s infinite 0.5s;
+}
+
+.mic-button.speaking {
+  background: #06b6d4;
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.5);
+}
+
+.mic-button.processing {
+  background: #eab308;
+  cursor: not-allowed;
+}
+
+.status-text {
+  font-size: 1.1rem;
+  color: #a1a1aa;
+  font-weight: 500;
+  height: 24px;
+}
+
+.listening-text {
+  color: #ef4444;
+}
+
+.processing-text {
+  color: #eab308;
+}
+
+.speaking-text {
+  color: #06b6d4;
+}
+
+.interim-transcript {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #71717a;
+  text-align: center;
+  min-height: 24px;
+  max-width: 80%;
+}
+
+@keyframes pulse-border {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #71717a;
+  text-align: center;
+  padding: 2rem;
+}
+
+.empty-state h3 {
+  margin-top: 1rem;
+  color: #e4e4e7;
+}
+
+.empty-state p {
+  margin-top: 0.5rem;
+  max-width: 400px;
+}
+
+.audio-visualizer {
+  display: flex;
+  gap: 4px;
+  height: 30px;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.audio-bar {
+  width: 4px;
+  background: #06b6d4;
+  border-radius: 2px;
+  animation: soundwave 1s ease-in-out infinite alternate;
+}
+
+.audio-bar:nth-child(1) { height: 10px; animation-delay: 0.1s; }
+.audio-bar:nth-child(2) { height: 20px; animation-delay: 0.2s; }
+.audio-bar:nth-child(3) { height: 30px; animation-delay: 0.3s; }
+.audio-bar:nth-child(4) { height: 15px; animation-delay: 0.4s; }
+.audio-bar:nth-child(5) { height: 25px; animation-delay: 0.5s; }
+
+@keyframes soundwave {
+  0% { transform: scaleY(0.3); }
+  100% { transform: scaleY(1); }
+}

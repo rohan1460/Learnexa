@@ -1,0 +1,126 @@
+.url-explainer-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 6rem);
+  gap: 2rem;
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.url-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.url-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.url-title span {
+  background: linear-gradient(135deg, #a78bfa, var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.url-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  flex: 1;
+  min-height: 0;
+}
+
+@media (max-width: 1024px) {
+  .url-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input-section, .output-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-height: 0;
+}
+
+.url-input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  color: #e4e4e7;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.url-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+.format-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+
+.format-card {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.format-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.format-card.active {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);
+}
+
+.format-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.format-card.active .format-icon {
+  background: var(--primary);
+  color: white;
+}
+
+.format-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.format-desc {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}

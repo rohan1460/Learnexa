@@ -1,0 +1,148 @@
+.summarize-page {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.summarize-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.text-paste-area {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  color: white;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  outline: none;
+  min-height: 180px;
+  line-height: 1.6;
+  transition: border-color 0.2s;
+}
+
+.text-paste-area:focus {
+  border-color: var(--primary);
+}
+
+.text-paste-area::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.style-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.style-picker label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.style-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.style-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  font-family: inherit;
+}
+
+.style-option:hover {
+  border-color: var(--primary);
+}
+
+.style-option.active {
+  border-color: var(--primary);
+  background: rgba(139, 92, 246, 0.12);
+}
+
+.style-main {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.style-desc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.summary-result {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.summary-header h3 {
+  font-size: 1.25rem;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.copy-btn:hover {
+  border-color: var(--primary);
+  color: white;
+}
+
+.summary-content {
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.summary-content h3,
+.summary-content h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.summary-content li {
+  margin-left: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.summary-content strong {
+  color: var(--primary);
+}
