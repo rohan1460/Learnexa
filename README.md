@@ -12,7 +12,7 @@
 [![OpenRouter](https://img.shields.io/badge/OpenRouter-AI-8A2BE2?style=for-the-badge)](https://openrouter.ai/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[✨ Features](#-features) • [🛠️ Tech Stack](#️-tech-stack) • [📸 Screenshots](#-screenshots) • [🤝 Contributing](#-contributing)
+[✨ Features](#-features) • [🛠️ Tech Stack](#️-tech-stack)
 
 ---
 
@@ -103,66 +103,6 @@ Ask questions. Generate quizzes. Summarize notes. Convert formats. Listen to you
 
 **Authentication**
 - 🔐 [NextAuth.js](https://next-auth.js.org/) — Complete auth solution
-
----
-
-## 📸 Screenshots
-
-> _Screenshots coming soon — add images to a `/screenshots` folder and reference them here._
-
-<!-- 
-Example:
-<div align="center">
-  <img src="screenshots/dashboard.png" width="80%" alt="Dashboard" />
-  <br><br>
-  <img src="screenshots/chat.png" width="45%" alt="AI Chat" />
-  <img src="screenshots/quiz.png" width="45%" alt="Quiz Generator" />
-</div>
--->
-
----
-
-## 📁 Project Structure
-
-```
-learnexa/
-├── prisma/              # Database schema & migrations
-├── public/              # Static assets
-├── src/
-│   ├── app/
-│   │   ├── api/         # API routes (chat, quiz, tts, etc.)
-│   │   ├── dashboard/   # Feature pages (chat, code, convert, etc.)
-│   │   ├── login/       # Authentication pages
-│   │   └── page.tsx     # Landing page
-│   ├── components/      # Reusable UI components
-│   ├── lib/             # Utilities (AI, Prisma, vectors)
-│   └── auth.ts          # NextAuth configuration
-├── .env.example         # Environment variables template
-└── package.json
-```
-
----
-
-## 🎯 Roadmap
-
-- [ ] Multi-language support 🌍
-- [ ] Collaborative study rooms 👥
-- [ ] Mobile app (React Native) 📱
-- [ ] Spaced repetition system for flashcards 🧠
-- [ ] Integration with Notion & Google Drive 📚
-- [ ] Offline mode with local AI 🔌
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ---
 
